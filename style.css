@@ -1,0 +1,28 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.5s ease;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  select {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  p {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  

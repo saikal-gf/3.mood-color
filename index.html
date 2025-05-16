@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Настроение в цвете</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Выбери своё настроение</h1>
+    <select id="moodSelector" onchange="changeMood()">
+      <option value="happy">😊 Радость</option>
+      <option value="sad">😢 Грусть</option>
+      <option value="angry">😠 Злость</option>
+      <option value="calm">😌 Спокойствие</option>
+    </select>
+    <p id="moodText">Цвет покажет твоё настроение 🎨</p>
+  </div>
+
+  <script>
+    function changeMood() {
+      const mood = document.getElementById("moodSelector").value;
+      const body = document.body;
+      const text = document.getElementById("moodText");
+
+      if (mood === "happy") {
+        body.style.backgroundColor = "#fffa8b";
+        text.style.color = "#ff9800";
+        text.textContent = "Светло и тепло — ты в радостном настроении!";
+      } else if (mood === "sad") {
+        body.style.backgroundColor = "#a0c4ff";
+        text.style.color = "#1e3a8a";
+        text.textContent = "Сегодня грустно? Это тоже нормально.";
+      } else if (mood === "angry") {
+        body.style.backgroundColor = "#ff4d4d";
+        text.style.color = "#7f0000";
+        text.textContent = "Гнев — сильная энергия. Используй её с умом.";
+      } else if (mood === "calm") {
+        body.style.backgroundColor = "#d0f4de";
+        text.style.color = "#155e63";
+        text.textContent = "Спокойствие — лучший друг ясного ума.";
+      }
+    }
+  </script>
+</body>
+</html>
